@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<link rel="icon" href="data:," />
+<title>Merchant Provisions: Free Review for Processing, Financing, and Benefits</title>
+<meta name="description" content="One free review across card processing, consumer financing and business loans, and commercial insurance and employee benefits. Get your breakdown in writing, with no obligation." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,700;9..144,800&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --emerald:#065f46;
+    --emerald-deep:#043f2e;
+    --emerald-mid:#059669;
+    --mint:#ecfdf5;
+    --mint-2:#d9f5e6;
+    --paper:#ffffff;
+    --ink:#12211b;
+    --muted:#52665e;
+    --line:#dcebe3;
+    --gold:#c9a86a;
+    --radius-lg:22px;
+    --radius-md:16px;
+    --radius-sm:10px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:"Manrope",system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--emerald)}
+  button,[role="button"],select,summary,input:not([type="checkbox"]){min-height:44px}
+  label:has(input[type="checkbox"]){min-height:44px;display:flex;align-items:center}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  /* Header */
+  header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+  .mark{width:42px;height:42px;border-radius:11px;background:var(--emerald);color:#fff;display:grid;place-items:center;font-family:"Fraunces",serif;font-weight:800;font-size:22px;line-height:1;flex:0 0 auto}
+  .brand-text{line-height:1.15}
+  .brand-text strong{display:block;font-size:16px;letter-spacing:-.02em}
+  .brand-text span{display:block;font-size:12px;color:var(--muted);font-weight:600}
+  nav{display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+  nav a{color:var(--ink);text-decoration:none;font-weight:700;font-size:14px;padding:10px 10px;border-radius:999px}
+  nav a:hover{background:var(--mint)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:800;border-radius:999px;padding:12px 20px;font-size:15px;border:1px solid transparent;cursor:pointer;transition:.15s}
+  .btn-primary{background:var(--emerald);color:#fff}
+  .btn-primary:hover{background:var(--emerald-deep)}
+  .btn-outline{background:#fff;color:var(--emerald);border-color:#b9d9cb}
+  .btn-outline:hover{border-color:var(--emerald)}
+  .btn-gold{background:var(--gold);color:#1d1808}
+  .header-cta{white-space:nowrap}
+  @media(max-width:760px){ nav a:not(.header-cta){display:none} }
+  /* Hero */
+  .hero{background:linear-gradient(180deg,var(--mint) 0%,#f7fdf9 78%,#fff 100%);padding:52px 0 28px;border-bottom:1px solid var(--line)}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:start}
+  @media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 12px;font-size:13px;font-weight:800;color:var(--emerald);letter-spacing:.02em}
+  .eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--emerald-mid);display:block}
+  h1{font-family:"Fraunces",serif;font-size:clamp(36px,5vw,56px);line-height:.98;letter-spacing:-.02em;margin:18px 0 16px;color:var(--emerald-deep);font-weight:800}
+  h1 em{font-style:normal;color:var(--emerald-mid)}
+  .lead{font-size:18px;color:#2f443b;max-width:34em;margin:0 0 22px}
+  .hero-points{list-style:none;padding:0;margin:0 0 26px;display:grid;gap:10px}
+  .hero-points li{display:flex;gap:10px;align-items:flex-start;font-weight:600;color:#23362e;font-size:15px}
+  .check{width:22px;height:22px;border-radius:50%;background:var(--emerald);color:#fff;display:grid;place-items:center;flex:0 0 auto;margin-top:2px;font-size:13px;line-height:1}
+  .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+  .hero-note{font-size:13px;color:var(--muted);margin-top:14px}
+  .contact-mini{margin-top:22px;padding-top:18px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+  .contact-mini strong{color:var(--ink)}
+  .contact-mini a{font-weight:700;text-decoration:none}
+  /* Calculator */
+  .calc-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:0 18px 40px rgba(6,95,70,.10);overflow:hidden}
+  .calc-head{background:var(--emerald-deep);color:#fff;padding:20px 22px}
+  .calc-head h2{margin:0;font-size:20px;letter-spacing:-.02em}
+  .calc-head p{margin:4px 0 0;color:#cdeee0;font-size:14px}
+  .calc-body{padding:22px}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-weight:800;font-size:14px;margin-bottom:6px}
+  .field small{display:block;color:var(--muted);font-weight:500;margin-top:4px}
+  .input-wrap{position:relative}
+  .input-wrap span{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--muted);font-weight:800}
+  .input-wrap input{width:100%;padding:12px 14px 12px 30px;border:1.5px solid #cfe3d9;border-radius:12px;font:inherit;font-weight:700;background:#fbfefd}
+  .input-wrap input:focus{outline:3px solid var(--mint-2);border-color:var(--emerald)}
+  .calc-btn{width:100%;font-size:16px;padding:14px}
+  .calc-results{display:none;margin-top:20px;border-top:1px dashed var(--line);padding-top:18px}
+  .calc-results.show{display:block}
+  .result-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+  @media(max-width:520px){.result-grid{grid-template-columns:1fr}}
+  .result-box{background:var(--mint);border-radius:12px;padding:14px}
+  .result-box span{display:block;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--emerald)}
+  .result-box strong{display:block;font-size:24px;letter-spacing:-.03em;margin-top:2px}
+  .result-box p{margin:2px 0 0;font-size:13px;color:var(--muted)}
+  .scenario{font-size:13px;color:var(--muted);background:#fffaf0;border:1px solid #f0e2bd;border-radius:10px;padding:10px 12px;margin-top:12px}
+  .disclaimer{font-size:12.5px;color:var(--muted);margin-top:12px}
+  .calc-cta{display:none;margin-top:16px;background:var(--emerald-deep);color:#fff;border-radius:14px;padding:16px}
+  .calc-cta.show{display:block}
+  .calc-cta strong{display:block;font-size:16px;margin-bottom:4px}
+  .calc-cta p{margin:0 0 12px;color:#d6f0e3;font-size:14px}
+  .full-calc{margin-top:14px;font-size:14px;text-align:center}
+  /* Sections */
+  section{padding:56px 0}
+  .section-head{max-width:720px;margin-bottom:28px}
+  .section-head h2{font-family:"Fraunces",serif;font-size:clamp(28px,3.6vw,38px);line-height:1.05;letter-spacing:-.02em;margin:0 0 10px;color:var(--emerald-deep)}
+  .section-head p{margin:0;color:var(--muted);font-size:17px}
+  /* Services */
+  .services{background:#fff}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:900px){.cards{grid-template-columns:1fr}}
+  .card{border:1px solid var(--line);border-radius:var(--radius-md);padding:24px;background:#fff;display:flex;flex-direction:column}
+  .card.featured{border-color:var(--emerald);box-shadow:0 12px 28px rgba(6,95,70,.10);position:relative}
+  .tag{position:absolute;top:-11px;left:20px;background:var(--emerald);color:#fff;font-size:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
+  .icon{width:48px;height:48px;border-radius:12px;background:var(--mint);display:grid;place-items:center;margin-bottom:16px}
+  .icon svg{width:26px;height:26px;stroke:var(--emerald)}
+  .card h3{margin:0 0 8px;font-size:20px;letter-spacing:-.02em;line-height:1.2}
+  .card p{margin:0 0 14px;color:var(--muted);font-size:15px}
+  .card ul{list-style:none;padding:0;margin:0 0 20px;display:grid;gap:8px;font-size:14.5px;font-weight:600}
+  .card ul li{display:flex;gap:8px}
+  .card ul li::before{content:"✓";color:var(--emerald-mid);font-weight:900}
+  .card .spacer{flex:1}
+  .card-actions{display:grid;gap:10px}
+  .card-actions .btn{width:100%}
+  .card-link{text-align:center;font-weight:800;font-size:14px;padding:10px;text-decoration:none}
+  /* How it works */
+  .how{background:var(--mint);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:900px){.steps{grid-template-columns:1fr}}
+  .step{background:#fff;border:1px solid var(--line);border-radius:var(--radius-md);padding:22px}
+  .step-num{width:36px;height:36px;border-radius:50%;background:var(--emerald);color:#fff;display:grid;place-items:center;font-weight:900;margin-bottom:14px}
+  .step h3{margin:0 0 6px;font-size:18px}
+  .step p{margin:0;color:var(--muted);font-size:15px}
+  /* Form + FAQ layout */
+  .split{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:start}
+  @media(max-width:900px){.split{grid-template-columns:1fr}}
+  .form-card{border:1px solid var(--line);border-radius:var(--radius-lg);padding:26px;background:#fff;box-shadow:0 12px 30px rgba(18,33,27,.06)}
+  .form-card h2{font-family:"Fraunces",serif;margin:0 0 6px;font-size:30px;color:var(--emerald-deep);letter-spacing:-.02em}
+  .form-card>p{margin:0 0 20px;color:var(--muted)}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:560px){.grid2{grid-template-columns:1fr}}
+  .form-field label{display:block;font-weight:800;font-size:14px;margin-bottom:6px}
+  .form-field label span{color:var(--muted);font-weight:600}
+  .form-field input,.form-field textarea{width:100%;padding:12px 14px;border:1.5px solid #cfe3d9;border-radius:12px;font:inherit;background:#fbfefd}
+  .form-field input:focus,.form-field textarea:focus{outline:3px solid var(--mint-2);border-color:var(--emerald)}
+  fieldset{border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:16px 0}
+  legend{font-weight:800;font-size:14px;padding:0 6px}
+  .check-row{display:flex;align-items:center;gap:10px;padding:6px 0;font-weight:600;font-size:15px;cursor:pointer}
+  .check-row input{width:20px;height:20px;accent-color:var(--emerald);flex:0 0 auto}
+  textarea{resize:vertical;min-height:96px}
+  .form-note{font-size:13px;color:var(--muted);margin-top:12px}
+  .confirm{display:none;margin-top:18px;background:var(--mint);border:1px solid #a7dcc2;border-radius:14px;padding:18px}
+  .confirm.show{display:block}
+  .confirm h3{margin:0 0 6px;color:var(--emerald-deep)}
+  .confirm p{margin:0 0 14px;color:#2f443b;font-size:15px}
+  /* FAQ */
+  .faq-list{display:grid;gap:12px}
+  details{border:1px solid var(--line);border-radius:12px;background:#fff;padding:2px 18px}
+  summary{cursor:pointer;font-weight:800;padding:14px 0;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-size:22px;color:var(--emerald);line-height:1}
+  details[open ] summary::after{content:"−"}
+  details p{margin:0 0 16px;color:var(--muted);font-size:15px}
+  .side-box{background:var(--emerald-deep);color:#fff;border-radius:var(--radius-lg);padding:24px;margin-bottom:18px}
+  .side-box h3{margin:0 0 8px;font-size:20px}
+  .side-box p{margin:0 0 16px;color:#d6f0e3;font-size:15px}
+  .side-box .btn{width:100%}
+  .side-box small{display:block;margin-top:12px;color:#a9d8c2;text-align:center}
+  /* Footer */
+  footer{background:#0b241c;color:#cfe8db;padding:40px 0 28px}
+  .footer-grid{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  footer .mark{background:#fff;color:var(--emerald-deep)}
+  footer strong{color:#fff}
+  footer a{color:#fff;font-weight:700}
+  .footer-bottom{border-top:1px solid rgba(255,255,255,.14);margin-top:24px;padding-top:16px;font-size:13px;color:#9fc4b2;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="Merchant Provisions home">
+      <span class="mark">M</span>
+      <span class="brand-text"><strong>Merchant Provisions</strong><span>Processing · Financing · Benefits</span></span>
+    </a>
+    <nav aria-label="Main">
+      <a href="#calculator">Calculator</a>
+      <a href="#services">Services</a>
+      <a href="#how">How it works</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-primary header-cta" href="https://calendly.com/david-mp/merchantprovisions" target="_blank" rel="noopener">Book a free call</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO + CALCULATOR -->
+  <div class="hero" id="calculator">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow"><i></i> One free review, all three services</span>
+        <h1>See what your business is <em>really paying,</em> in writing.</h1>
+        <p class="lead">Merchant Provisions reviews your card processing, financing options, and insurance and benefits together, so you get one clear picture instead of three separate sales pitches.</p>
+        <ul class="hero-points">
+          <li><span class="check">✓</span> Free effective rate breakdown from your own statement, with no obligation to switch</li>
+          <li><span class="check">✓</span> Financing options that cover prime through no credit check, so more customers can say yes</li>
+          <li><span class="check">✓</span> Commercial insurance and group benefits sized for your team</li>
+        </ul>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#lead-form">Get my free breakdown</a>
+          <a class="btn btn-outline" href="https://calendly.com/david-mp/merchantprovisions" target="_blank" rel="noopener">Book a call with David</a>
+        </div>
+        <p class="hero-note">No obligation. Your breakdown is in writing, so you can compare it line by line with what you have now.</p>
+        <div class="contact-mini">
+          Talk to <strong>David Oguh</strong> · <a href="mailto:david@merchantprovisions.com">david@merchantprovisions.com</a> · <a href="tel:+19156674954">(915) 667-4954</a> · <a href="https://merchantprovisions.com" target="_blank" rel="noopener">merchantprovisions.com</a>
+        </div>
+      </div>
+
+      <div class="calc-card" aria-labelledby="calc-title">
+        <div class="calc-head">
+          <h2 id="calc-title">Savings calculator</h2>
+          <p>Enter last month from your statement to see your effective rate.</p>
+        </div>
+        <div class="calc-body">
+          <form id="calcForm">
+            <div class="field">
+              <label for="volume">Monthly card volume</label>
+              <div class="input-wrap"><span>$</span><input id="volume" type="number" inputmode="decimal" min="0" step="any" placeholder="25,000" required /></div>
+              <small>Total card sales processed last month.</small>
+            </div>
+            <div class="field">
+              <label for="fees">Monthly fees paid</label>
+              <div class="input-wrap"><span>$</span><input id="fees" type="number" inputmode="decimal" min="0" step="any" placeholder="875" required /></div>
+              <small>Total processing fees and charges for that same month.</small>
+            </div>
+            <button class="btn btn-primary calc-btn" type="submit">Calculate my effective rate</button>
+          </form>
+
+          <div class="calc-results" id="calcResults" aria-live="polite">
+            <div class="result-grid">
+              <div class="result-box"><span>Effective rate</span><strong id="effRate">0.00%</strong><p>Fees divided by volume</p></div>
+              <div class="result-box"><span>Est. monthly</span><strong id="saveMonth">$0</strong><p>Illustrative scenario</p></div>
+              <div class="result-box"><span>Est. annual</span><strong id="saveYear">$0</strong><p>Monthly times 12</p></div>
+            </div>
+            <p class="scenario" id="scenarioText">Scenario used below: what a 0.50 percentage point lower effective rate would mean on your volume. It is an illustration to start the conversation, not a quote or a promise.</p>
+            <p class="disclaimer">Illustrative estimate only. Your actual result depends on your card mix, ticket size, industry, and current pricing. The free breakdown uses your real statement and shows the math in writing.</p>
+          </div>
+
+          <div class="calc-cta" id="calcCta">
+            <strong>Want the full breakdown in writing?</strong>
+            <p>Send your details and David will prepare your free effective rate breakdown from your statement, with no obligation to switch.</p>
+            <button class="btn btn-gold" id="calcToForm" type="button" style="width:100%">Get my full breakdown</button>
+          </div>
+
+          <p class="full-calc">Need more detail? <a href="https://merchantsavings-g255v4pnd-merchantsavings-ai.vercel.app/" target="_blank" rel="noopener">Open the full calculator tool</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Three services, one review</h2>
+        <p>Pick one, or have all three looked at together. Most owners start with processing, then add the piece that is costing them customers or coverage.</p>
+      </div>
+      <div class="cards">
+        <article class="card featured">
+          <span class="tag">Start here</span>
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
+          <h3>B2B merchant processing</h3>
+          <p>Level 2 and Level 3 interchange optimization for business to business payments, plus the everyday tools to take cards anywhere you sell.</p>
+          <ul>
+            <li>Free effective rate breakdown from your own statement, in writing</li>
+            <li>Level 2 and Level 3 interchange optimization</li>
+            <li>Payment gateways, POS, and mobile readers</li>
+            <li>Free equipment for qualifying businesses</li>
+          </ul>
+          <div class="spacer"></div>
+          <div class="card-actions">
+            <button class="btn btn-primary js-select-service" data-service="processing" type="button">Request a processing review</button>
+            <a class="card-link" href="#calculator">Run the calculator first</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <h3>Consumer financing and business loans</h3>
+          <p>Lender platforms covering prime through no credit check, so more of your customers get approved at the point of sale, plus working capital for the business itself.</p>
+          <ul>
+            <li>Options across the credit spectrum, including no credit check</li>
+            <li>Built for high ticket sales where financing closes the deal</li>
+            <li>Business loans and working capital options</li>
+          </ul>
+          <div class="spacer"></div>
+          <div class="card-actions">
+            <button class="btn btn-primary js-select-service" data-service="financing" type="button">Ask about financing</button>
+            <a class="card-link" href="https://lexingtoncapitalholdings.formtitan.com/ftproject/ft58c846d515a448fb990fb4e95ba6b5ce?ref=001Uo00000nZwmT" target="_blank" rel="noopener">Apply for working capital</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-3.6 8-10V5l-8-3-8 3v7c0 6.4 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>Commercial insurance and employee benefits</h3>
+          <p>Commercial insurance packages and group benefits for small and mid size businesses, sized for the team you have now and the one you are building.</p>
+          <ul>
+            <li>Commercial insurance packages for your operation</li>
+            <li>Group benefits for small and mid size teams</li>
+            <li>Reviewed alongside your processing and financing, not in isolation</li>
+          </ul>
+          <div class="spacer"></div>
+          <div class="card-actions">
+            <button class="btn btn-primary js-select-service" data-service="insurance" type="button">Request an insurance review</button>
+            <a class="card-link" href="https://calendly.com/david-mp/merchantprovisions" target="_blank" rel="noopener">Book a benefits call</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how" id="how">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>How it works</h2>
+        <p>Simple, in writing, and on your timeline.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="step-num">1</div><h3>Run the calculator or tell us about your business</h3><p>Start with the calculator above for a quick effective rate check, or go straight to the form and tell us which services you want reviewed.</p></div>
+        <div class="step"><div class="step-num">2</div><h3>Get your free breakdown in writing</h3><p>David prepares your breakdown from your own statement and information. You see the numbers clearly, not just a verbal quote.</p></div>
+        <div class="step"><div class="step-num">3</div><h3>Decide with no obligation</h3><p>Compare it to what you have now. Move forward only if it makes sense for your business. If it does not, you keep the breakdown.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEAD FORM + FAQ -->
+  <section id="lead-form">
+    <div class="wrap split">
+      <div class="form-card">
+        <h2>Get your free review</h2>
+        <p>Tell us where to send it. Submitting opens a prefilled email to David with your details, so nothing gets lost in a form database.</p>
+        <form id="leadForm">
+          <div class="grid2">
+            <div class="form-field"><label for="leadName">Your name *</label><input id="leadName" required autocomplete="name" placeholder="Your full name" /></div>
+            <div class="form-field"><label for="leadBiz">Business name *</label><input id="leadBiz" required autocomplete="organization" placeholder="Your business" /></div>
+            <div class="form-field"><label for="leadEmail">Email *</label><input id="leadEmail" type="email" required autocomplete="email" placeholder="you@yourbusiness.com" /></div>
+            <div class="form-field"><label for="leadPhone">Phone <span>(optional)</span></label><input id="leadPhone" type="tel" autocomplete="tel" placeholder="(555) 555-5555" /></div>
+          </div>
+          <fieldset>
+            <legend>What should we review?</legend>
+            <label class="check-row"><input type="checkbox" id="svcProcessing" value="B2B merchant processing" /> B2B merchant processing</label>
+            <label class="check-row"><input type="checkbox" id="svcFinancing" value="Consumer financing and business loans" /> Consumer financing and business loans</label>
+            <label class="check-row"><input type="checkbox" id="svcInsurance" value="Commercial insurance and employee benefits" /> Commercial insurance and employee benefits</label>
+          </fieldset>
+          <div class="form-field"><label for="leadMsg">Message <span>(optional)</span></label><textarea id="leadMsg" placeholder="Anything helpful: monthly volume, current provider, ticket size, team size, or what you want to fix first."></textarea></div>
+          <button class="btn btn-primary" type="submit" style="width:100%;margin-top:16px;font-size:16px;padding:14px">Send my request to David</button>
+          <p class="form-note">Prefer to talk first? Call <a href="tel:+19156674954">(915) 667-4954</a> or <a href="https://calendly.com/david-mp/merchantprovisions" target="_blank" rel="noopener">book a time on Calendly</a>.</p>
+        </form>
+        <div class="confirm" id="confirmPanel" aria-live="polite">
+          <h3>Your email is ready to send</h3>
+          <p>Your mail app should have opened with your details filled in for David. Once you send it, the fastest next step is to grab a time so your breakdown is ready before the call.</p>
+          <a class="btn btn-primary" href="https://calendly.com/david-mp/merchantprovisions" target="_blank" rel="noopener" style="width:100%">Book my free call on Calendly</a>
+          <p style="margin-top:12px;font-size:14px">Did your mail app not open? Email David directly at <a href="mailto:david@merchantprovisions.com">david@merchantprovisions.com</a> or call <a href="tel:+19156674954">(915) 667-4954</a>.</p>
+        </div>
+      </div>
+
+      <div id="faq">
+        <div class="side-box">
+          <h3>Want to skip the form?</h3>
+          <p>Book a short call and bring your latest statement. David will walk through what to look for and what your review will cover.</p>
+          <a class="btn btn-gold" href="https://calendly.com/david-mp/merchantprovisions" target="_blank" rel="noopener">Book on Calendly</a>
+          <small>David Oguh · (915) 667-4954</small>
+        </div>
+        <div class="section-head" style="margin-bottom:16px">
+          <h2 style="font-size:30px">Common questions</h2>
+        </div>
+        <div class="faq-list">
+          <details><summary>Is the review really free?</summary><p>Yes. The effective rate breakdown and the initial review across processing, financing, and insurance and benefits are free, and you get the breakdown in writing with no obligation to switch or buy anything.</p></details>
+          <details><summary>What do you need for the processing breakdown?</summary><p>A recent processing statement is best, because it shows your real volume, fees, and card mix. If you do not have one handy, start with the calculator and the form, and David will tell you exactly what to send.</p></details>
+          <details><summary>Do I have to switch providers?</summary><p>No. The point of putting it in writing is so you can compare it fairly with what you have now. You decide whether a change makes sense.</p></details>
+          <details><summary>What does free equipment mean?</summary><p>Free equipment is available for qualifying businesses. Whether your business qualifies depends on your setup and volume, and David will confirm that in your review before you commit to anything.</p></details>
+          <details><summary>Can financing really cover no credit check?</summary><p>The lender platforms we work with cover a wide range, from prime through no credit check options. Approval and terms depend on the lender and the customer, and not every applicant will qualify for every option.</p></details>
+          <details><summary>Which service should I start with?</summary><p>Most owners start with processing because the statement makes the cost easy to see. If you are losing sales at checkout, start with financing. If coverage or benefits are up for renewal, start there. You can check more than one box on the form.</p></details>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div style="display:flex;gap:12px;align-items:flex-start;max-width:420px">
+        <span class="mark">M</span>
+        <div><strong>Merchant Provisions</strong><br /><span style="font-size:14px">B2B merchant processing, consumer financing and business loans, and commercial insurance and employee benefits for small and mid size businesses.</span></div>
+      </div>
+      <div style="font-size:15px;line-height:1.9">
+        <strong>Contact David Oguh</strong><br />
+        <a href="mailto:david@merchantprovisions.com">david@merchantprovisions.com</a><br />
+        <a href="tel:+19156674954">(915) 667-4954</a><br />
+        <a href="https://merchantprovisions.com" target="_blank" rel="noopener">merchantprovisions.com</a><br />
+        <a href="https://calendly.com/david-mp/merchantprovisions" target="_blank" rel="noopener">Book a free call</a>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Merchant Provisions. All rights reserved.</span><span>Free breakdown in writing, with no obligation.</span></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var fmt = function(n){ return n.toLocaleString('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}); };
+  var calcForm = document.getElementById('calcForm');
+  var results = document.getElementById('calcResults');
+  var cta = document.getElementById('calcCta');
+  var lastCalc = null;
+  calcForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    var vol = parseFloat(document.getElementById('volume').value);
+    var fees = parseFloat(document.getElementById('fees').value);
+    if(!vol || vol <= 0 || isNaN(fees) || fees < 0){ return; }
+    var rate = (fees / vol) * 100;
+    var monthly = Math.min(vol * 0.005, fees);
+    var annual = monthly * 12;
+    lastCalc = {vol:vol, fees:fees, rate:rate, monthly:monthly, annual:annual};
+    document.getElementById('effRate').textContent = rate.toFixed(2) + '%';
+    document.getElementById('saveMonth').textContent = fmt(monthly);
+    document.getElementById('saveYear').textContent = fmt(annual);
+    document.getElementById('scenarioText').textContent = 'On ' + fmt(vol) + ' in monthly volume, a 0.50 percentage point lower effective rate would be about ' + fmt(monthly) + ' per month. This scenario is an illustration to start the conversation, not a quote or a promise.';
+    results.classList.add('show');
+    cta.classList.add('show');
+    results.scrollIntoView({behavior:'smooth', block:'nearest'});
+  });
+
+  function selectService(key, scroll){
+    var map = {processing:'svcProcessing', financing:'svcFinancing', insurance:'svcInsurance'};
+    var el = document.getElementById(map[key]);
+    if(el) el.checked = true;
+    if(scroll !== false){
+      document.getElementById('lead-form').scrollIntoView({behavior:'smooth'});
+      setTimeout(function(){ document.getElementById('leadName').focus({preventScroll:true}); }, 500);
+    }
+  }
+  document.getElementById('calcToForm').addEventListener('click', function(){
+    selectService('processing');
+    if(lastCalc){
+      var msg = document.getElementById('leadMsg');
+      if(!msg.value){
+        msg.value = 'Calculator result: monthly volume ' + fmt(lastCalc.vol) + ', monthly fees ' + fmt(lastCalc.fees) + ', effective rate ' + lastCalc.rate.toFixed(2) + '%. Please send my full breakdown in writing.';
+      }
+    }
+  });
+  var btns = document.querySelectorAll('.js-select-service');
+  for(var i=0;i<btns.length;i++){
+    btns[i].addEventListener('click', function(){ selectService(this.getAttribute('data-service')); });
+  }
+  // Hero primary CTA also preselects nothing, just scrolls; keep form clean
+
+  document.getElementById('leadForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('leadName').value.trim();
+    var biz = document.getElementById('leadBiz').value.trim();
+    var email = document.getElementById('leadEmail').value.trim();
+    var phone = document.getElementById('leadPhone').value.trim();
+    var msg = document.getElementById('leadMsg').value.trim();
+    var services = [];
+    ['svcProcessing','svcFinancing','svcInsurance'].forEach(function(id){
+      var cb = document.getElementById(id);
+      if(cb && cb.checked) services.push(cb.value);
+    });
+    if(services.length === 0) services.push('Not specified yet, please advise');
+    var subject = 'Free review request from ' + biz;
+    var lines = [
+      'Name: ' + name,
+      'Business: ' + biz,
+      'Email: ' + email,
+      'Phone: ' + (phone || 'Not provided'),
+      '',
+      'Services to review:',
+      services.map(function(s){ return '- ' + s; }).join('\n'),
+      '',
+      'Message:',
+      msg || 'No additional message.',
+      '',
+      'Please send my free breakdown in writing.'
+    ];
+    var mailto = 'mailto:david@merchantprovisions.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n'));
+    document.getElementById('confirmPanel').classList.add('show');
+    window.location.href = mailto;
+    setTimeout(function(){ document.getElementById('confirmPanel').scrollIntoView({behavior:'smooth', block:'nearest'}); }, 300);
+  });
+})();
+</script>
+</body>
+</html>
